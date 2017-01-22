@@ -1,0 +1,28 @@
+<h3>Top Heroes</h3>
+
+<div class="grid grid-pad">
+    
+    <!--
+        O valor passado para "routerLink" (lembrando que colchetes indicam que
+        um valor está sendo ENVIADO como parâmetro para a diretiva) é de um
+        tipo chamado de "link parameters array" pelos docs do angular 2.
+
+        O array tem 2 elementos: o primeiro é o "path", ou seja, o caminho da
+        rota de destino do link (nesse caso, /detail) e o segundo é o
+        parâmetro, que será inserido depois da rota (ou seja, /detail/x, sendo
+        "x" o valor de hero.id em cada iteração do *ngFor).
+
+        É interessante notar que esses dois parâmetros batem com os parâmetros
+        definidos em cada rota do "forRoot" do "RouterModule". 
+    -->
+    <a *ngFor="let hero of heroes" [routerLink]="['/detail', hero.id]" class="col-1-4">
+        
+        <div class="module hero">
+
+            <h4>{{hero.name}}</h4>
+
+        </div>
+
+    </a>
+    
+</div>

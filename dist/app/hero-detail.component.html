@@ -1,0 +1,22 @@
+<div *ngIf="hero">
+    
+    <h2>{{hero.name}} details!</h2>
+
+    <div>
+        <label>id: </label>{{hero.id}}
+    </div>
+    
+    <!--
+        We will no longer receive the hero in a parent component property
+        binding. The new HeroDetailComponent should take the id parameter from
+        the params observable in the ActivatedRoute service and use the
+        HeroService to fetch the hero with that id.
+    -->
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="hero.name" placeholder="name" /> 
+    </div>
+
+    <button (click)="goBack()">Back</button>
+
+</div>
