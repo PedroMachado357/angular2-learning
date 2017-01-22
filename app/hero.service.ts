@@ -56,10 +56,10 @@ export class HeroService {
             //.then(heroes => heroes.find(hero => hero.id === id))
 
 
-            // Não tenho certeza, mas imagina que o que estive entre { } será
+            // Não tenho certeza, mas imagino que o que estive entre { } será
             // interpolado na String.
             // Assim, a url apontará para api/heroes/id, sendo id o valor
-            // recebido como parÂmetro dessa função (getHero).
+            // recebido como parâmetro dessa função (getHero).
             const url = `${this.heroesUrl}/${id}`;
 
             return this.http.get(url)
